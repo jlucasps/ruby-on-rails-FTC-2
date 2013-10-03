@@ -4,12 +4,11 @@
 
 <%= @name%>
 
+<%= link_to 'Saiba mais sobre nós', about_path  %>
+
+
 <%= content_for :sidebar do %>
   <%= render partial: 'shared/sidebar', locals: {local_name: @name} %>
 <% end %>
 
 
-
-<%= content_for :menu do %>
-  MENU
-<% end %>

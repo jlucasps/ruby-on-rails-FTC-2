@@ -6,8 +6,13 @@ class WelcomeController < ApplicationController
     @name = 'João Lucas'
   end
 
-  def black
-    
+  def black   
+   
+  end
+
+
+  def about
+  
   end
 
 

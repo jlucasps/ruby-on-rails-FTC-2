@@ -7,5 +7,15 @@ describe ".index", :type => :feature do
     page.should have_content('João Lucas')
   end
 
+  it 'change to about page after click on link' do
+
+    visit index_path
+    click_link'Saiba mais sobre nós'
+    page.should have_content 'Sobre'
+
+
+  end
+
+
 end
 

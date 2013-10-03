@@ -4,4 +4,6 @@ FirstApp::Application.routes.draw do
 
   get '/black', to: 'welcome#black', as: :black
 
+  get '/about', to: 'welcome#about', as: :about
+
 end
