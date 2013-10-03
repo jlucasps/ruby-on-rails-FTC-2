@@ -6,19 +6,9 @@
   <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style='background-color:black;'>
 
-  <%= yield :menu %>
-
-  <div class='row-fluid'>
-    <div class='span3'>
-      <%= yield :sidebar %>
-    </div>
-
-    <div class='span9'>
-      <%= yield %>
-    </div>
-  </div>
-
+  <%= yield %>
+  
 </body>
 </html>

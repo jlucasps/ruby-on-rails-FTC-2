@@ -1,0 +1,15 @@
+
+
+<h1>Conteúdo central</h1>
+
+<%= @name%>
+
+<%= content_for :sidebar do %>
+  <%= render partial: 'shared/sidebar', locals: {local_name: @name} %>
+<% end %>
+
+
+
+<%= content_for :menu do %>
+  MENU
+<% end %>
