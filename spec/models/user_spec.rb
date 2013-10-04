@@ -80,4 +80,20 @@ describe User do
     end
   end
 
+  # NOVO
+
+  it 'does no create two users with same email' do
+    User.create :name => 'Maria', 
+                :email => 'jlucasps@gmail.com', 
+                :age => 24,
+                :gender => User::FEMALE
+    
+
+    user = User.new :name => 'João Lucas 2', 
+                    :email => 'jlucasps@gmail.com', 
+                    :age => 30,
+                    :gender => User::MALE
+    user.save.should be_false
+  end
+
 end
