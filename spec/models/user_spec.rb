@@ -20,4 +20,23 @@ describe User do
     user.save.should be_false
   end
 
+  # NOVO 
+  #------
+
+  it 'creates an user with gender MALE' do 
+    user = User.new :name => 'Bob Dylan',
+                    :email => 'bob@dylan.com',
+                    :age => 24,
+                    :gender => User::MALE
+    user.save.should be_true
+  end
+
+  it 'creates an user with gender FEMALE' do 
+    user = User.new :name => 'Candice',
+                    :email => 'candice@gmail.com',
+                    :age => 24,
+                    :gender => User::FEMALE
+    user.save.should be_true
+  end
+
 end
