@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 group :test do
   gem 'capybara'
   gem 'rspec-rails'
+
+  gem 'shoulda'
+
 end
 
 
