@@ -8,16 +8,20 @@
 </head>
 <body>
 
-  <%= yield :menu %>
+  <div class='container'>
+    
+    <div class='row-fluid'>
+      
+      <div class='span3'>
+        <%= yield :sidebar %>
+      </div>
 
-  <div class='row-fluid'>
-    <div class='span3'>
-      <%= yield :sidebar %>
+      <div class='span9'>
+        <%= yield %>
+      </div>
+      
     </div>
 
-    <div class='span9'>
-      <%= yield %>
-    </div>
   </div>
 
 </body>

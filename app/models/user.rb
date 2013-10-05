@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   # Public Methods
   def adulthood
-    self.age >= 18
+    self.age.present? and self.age >= 18
   end
 
 end

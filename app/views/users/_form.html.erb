@@ -1,0 +1,35 @@
+<%= form_for(user) do |f| %>
+  
+  <%= render :partial => 'shared/error_messages', :locals => {:resource => user} %>
+
+  <div class='field'>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email %><br/>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :age %><br/>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :gender %><br/>
+    <%= f.number_field :gender %>
+  </div>
+
+  <div class='form-actions'>
+    <%= f.submit  'Salvar', :class => 'btn btn-primary' %>
+    <%= link_to 'Voltar', users_path, :class => 'btn' %>
+  </div>
+
+<% end %>
+
+
+
+
+
