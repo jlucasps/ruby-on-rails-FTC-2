@@ -1,0 +1,7 @@
+<% if @bill.persisted? %>
+  $("#bills").html(" <%= j(render partial: 'bills/index', locals: {bills: @bill.user.bills}) %> ");
+  $("new_bill").html("<%= j(render partial: 'bills/form', locals: {bill: Bill.new, user: @bill.user}) %>");
+  $("#bill").prepend("<%= j notice %>");
+<% else %>
+  $("form.new_bill").html("<%= j(render partial: 'bills/form', locals: {bill: @bill, user: @bill.user}) %>");
+<% end %>

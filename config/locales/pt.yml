@@ -1,0 +1,76 @@
+pt:
+  hello_world: "Olá, bom dia!"
+  no_bills: Não há contas para este usuário!
+  new_bill: Nova conta
+  saved_successfully: Salvo com sucesso!
+  error_while_saving: Erro ao salvar!
+  save: Salvar
+
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+      only_day: "%d"
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order: "[:day,:month,:year]"
+
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M hs"
+      default_short: "%A, %d de %B de %Y"
+      time: "%H:%M hs"
+      short: "%d/%m, %H:%M hs"
+      long: "%A, %d de %B de %Y, %H:%M hs"
+      only_second: "%S"
+      day_month_name_year: "%A, %d de %B de %Y"
+      datetime:
+        formats:
+          default: "%Y-%m-%dT%H:%M:%S%Z"
+    am: ''
+    pm: ''
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "não é um valor válido"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: {{count}} caracteres)"
+        too_short: "é muito curto (mínimo: {{count}} caracteres)"
+        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior do que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor do que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+        record_invalid: "Falha na validação: %{errors}"
+        restrict_dependent_destroy:
+          one: Não é possível apagar o registro porque existen registros dependentes (%{record})
+          many: Não é possível apagar o registro porque existen registros dependentes (%{record})
+    models:
+      user: 
+        one: Usuário
+        other: Usuários
+      bill:
+        one: Conta
+        other: Contas
+
+    attributes:
+      bill:
+        name: Nome da conta
+        description: Descrição
+        date: Data da conta
+        value: Valor em reais

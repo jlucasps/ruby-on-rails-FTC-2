@@ -1,0 +1,4 @@
+$("#bill_<%= @bill.id %>").html("<%= j(render partial: 'bills/form', locals: {bill: @bill, user: @bill.user}) %>");
+
+
+

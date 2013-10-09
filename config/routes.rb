@@ -6,6 +6,8 @@ FirstApp::Application.routes.draw do
 
   get '/about', to: 'welcome#about', as: :about
 
-  resources :users
-
+  resources :users do
+    resources :bills
+  end
+  
 end

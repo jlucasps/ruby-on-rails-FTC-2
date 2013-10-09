@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131004005100) do
+ActiveRecord::Schema.define(version: 20131005005234) do
+
+  create_table "bills", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "date",        null: false
+    t.decimal  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bills", ["user_id"], name: "index_bills_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

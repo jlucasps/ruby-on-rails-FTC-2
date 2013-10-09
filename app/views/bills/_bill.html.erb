@@ -1,0 +1,12 @@
+
+
+<%= div_for(bill, class: 'well well-small') do %>
+  <h4><%= bill.name %></h4>
+  <%= bill.description %>
+
+  <h5><%= l(bill.date, format: :long) %></h5>
+  <h3><%= bill.value.round(2) %></h3>
+
+  <%= link_to 'Editar', edit_user_bill_path(bill.user, bill), class: 'btn btn-primary', remote: true %>
+  <%= link_to 'Remover', [bill.user, bill], class: 'btn btn-danger', remote: true, method: :delete, confirm: 'Tem certeza que deseja excluir?' %>
+<% end  %>

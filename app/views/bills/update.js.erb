@@ -1,0 +1,5 @@
+<% if @bill.valid? %>
+  $("#bill_<%= @bill.id %>").replaceWith("<%= j(render @bill) %>");
+<% else %>
+  $("#bill_<%= @bill.id %>").html("<%= j(render partial: 'bills/form', locals: {bill: @bill, user: @bill.user}) %>");
+<% end %>

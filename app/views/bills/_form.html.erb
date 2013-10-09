@@ -1,0 +1,22 @@
+
+<%= form_for([user, bill], remote: true) do |f| %>
+  <%= render partial: 'shared/error_messages', locals: {resource: bill} %>
+
+  <%= f.hidden_field :user_id, value: user.id %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :date %>
+  <%= f.text_field :date%>
+
+  <%= f.label :value %>
+  <%= f.text_field :value %>
+
+  <div class='form-actions'>
+    <%= f.submit t('save'), class: 'btn btn-success' %>
+  </div>
+<% end %>

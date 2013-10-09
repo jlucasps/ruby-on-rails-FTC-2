@@ -1,0 +1,3 @@
+<% if @bill.destroyed? %>
+  $("#bill_<%= @bill.id %>").remove();
+<% end %>

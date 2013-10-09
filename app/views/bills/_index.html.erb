@@ -1,0 +1,16 @@
+<% if bills.any? %>
+
+  <% bills.each do |bill| %>
+
+    <%= render bill %>
+
+  <% end %>
+
+
+<% else %>
+
+  <div class='alert'>
+    <%= t('no_bills') %>
+  </div>
+
+<% end %>
