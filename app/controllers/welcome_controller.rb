@@ -1,6 +1,10 @@
 class WelcomeController < ApplicationController
 
-  layout 'application_black', :only => [:black, :other]
+
+  before_filter :authenticate_user!, except: [:index, :black, :about]
+
+
+  layout 'application_black', :only => [:black]
 
   def index
     @name = 'João Lucas'
