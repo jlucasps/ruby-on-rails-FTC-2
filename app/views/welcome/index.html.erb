@@ -8,6 +8,7 @@
 
 <%= link_to 'Listar usuários', users_path, :class => 'btn btn-large' %>
 
+
 <%= content_for :sidebar do %>
   <%= render partial: 'shared/sidebar', locals: {local_name: @name} %>
 <% end %>

@@ -19,10 +19,18 @@ class User < ActiveRecord::Base
 
   # Scopes
 
+  # Callback
+  after_create :send_welcome_email
+
+
   # Public Methods
   def adulthood
     self.age.present? and self.age >= 18
   end
 
+  def send_welcome_email
+    AppMailer::UserMailer.welcome_message(self.name, self.email).deliver
+  end
+  
 end
 

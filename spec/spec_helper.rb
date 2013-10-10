@@ -3,9 +3,12 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'factory_girl'
+require 'factory_girl_patch'
 require 'capybara/rails'
 require 'capybara/rspec'
 
+FactoryGirl.register_strategy(:find_or_create, FactoryGirlPatch)
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -25,6 +28,9 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   config.include Capybara::DSL
+
+  config.include Devise::TestHelpers, type: :controller
+
   config.include Rails.application.routes.url_helpers
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

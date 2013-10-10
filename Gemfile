@@ -65,3 +65,7 @@ end
 gem 'devise'
 
 gem 'mailcatcher'
+
+gem 'debugger'
+
+gem 'factory_girl_rails'

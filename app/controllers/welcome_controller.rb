@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
 
   def index
     @name = 'João Lucas'
+    #debugger
   end
 
   def black   

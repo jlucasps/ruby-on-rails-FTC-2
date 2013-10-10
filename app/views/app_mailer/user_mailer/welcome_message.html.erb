@@ -1,0 +1,17 @@
+
+<% content_for :title do %>
+  Bem vindo
+<% end %>
+
+<% content_for :description do %>
+  Olá <b><%= @user_name %> </b>
+<% end %>
+
+<% content_for :data do %>
+  <span style="font-size:15px;">
+    <p>
+      <%= @user_mail %>
+    </p>
+    <br/>
+  </span>
+<% end %>

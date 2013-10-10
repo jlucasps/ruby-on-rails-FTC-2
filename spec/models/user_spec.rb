@@ -2,7 +2,7 @@ require 'spec_helper'
 
 
 describe User do 
-  
+  /
   it 'create an user' do
     user = User.new :name => 'João Lucas', 
                     :email => 'jlucasps@gmail.com', 
@@ -95,5 +95,5 @@ describe User do
                     :gender => User::MALE
     user.save.should be_false
   end
-
+/
 end
