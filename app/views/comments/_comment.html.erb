@@ -1,0 +1,17 @@
+
+<%= div_for(comment) do %>
+
+  <blockquote>
+    <p>
+      <%= comment.content %>
+      <%= link_to "<i class='icon-remove icon-white'></i>".html_safe,
+                  comment, remote: true, method: :delete,
+                  class: 'btn btn-danger btn-mini pull-right' %>
+
+      <%= link_to "<i class='icon-edit icon-white'></i>".html_safe,
+                  edit_comment_path(comment), remote: true,
+                  class: 'btn btn-primary btn-mini pull-right' %>
+    </p>
+  </blockquote>
+
+<% end %>

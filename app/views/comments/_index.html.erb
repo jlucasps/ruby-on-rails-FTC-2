@@ -4,9 +4,7 @@
 
     <% commentable.comments.each do |comment| %>
 
-      <blockquote>
-        <p><%= comment.content %></p>
-      </blockquote>
+      <%= render comment %>
 
     <% end %>
 

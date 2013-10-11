@@ -1,2 +1,3 @@
-$("#modal-container").html("<%= j(render partial: 'comments/modal', locals:{comment: @comment}) %>");
+<% modal_content = j(render partial: 'comments/modal', locals:{comment: @comment}) %>
+$("#modal-container").html("<%= modal_content %>");
 $("#modal-comments").modal();
