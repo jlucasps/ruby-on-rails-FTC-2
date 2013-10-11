@@ -1,0 +1,24 @@
+<div id="commentable_<%= commentable.class %>_<%= commentable.id %>">
+
+  <% if commentable.comments.any? %>
+
+    <% commentable.comments.each do |comment| %>
+
+      <blockquote>
+        <p><%= comment.content %></p>
+      </blockquote>
+
+    <% end %>
+
+  <% else %>
+    Não há comentários
+  <% end %>
+
+
+  <br/>
+  <%= link_to "<i class='icon-comment icon-white'></i> Novo Comentário".html_safe,
+              new_comment_path(commentable_type: commentable.class, commentable_id: commentable.id),
+              class: 'btn btn-primary btn-small', remote: true %>
+
+</div>
+

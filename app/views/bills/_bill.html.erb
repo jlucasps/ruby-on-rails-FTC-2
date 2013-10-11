@@ -9,4 +9,8 @@
 
   <%= link_to 'Editar', edit_user_bill_path(bill.user, bill), class: 'btn btn-primary', remote: true %>
   <%= link_to 'Remover', [bill.user, bill], class: 'btn btn-danger', remote: true, method: :delete, confirm: 'Tem certeza que deseja excluir?' %>
+
+  <h3>Comentários</h3>
+  <%= render partial: 'comments/index', locals: {commentable: bill} %>
+
 <% end  %>

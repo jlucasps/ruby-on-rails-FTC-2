@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Usuário criado'
       redirect_to user_path(@user)
     else
-      render :action => :new  
+      render :action => :new
     end
   end
 
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def update 
+  def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:notice] = 'Usuário atualizado'
