@@ -61,7 +61,7 @@ pt:
           one: Não é possível apagar o registro porque existen registros dependentes (%{record})
           many: Não é possível apagar o registro porque existen registros dependentes (%{record})
     models:
-      user: 
+      user:
         one: Usuário
         other: Usuários
       bill:
@@ -70,6 +70,7 @@ pt:
 
     attributes:
       bill:
+        user_id: Usuário responsável
         name: Nome da conta
         description: Descrição
         date: Data da conta

@@ -8,6 +8,7 @@ class Bill < ActiveRecord::Base
 
   # Associations
   belongs_to :user
+  has_many :comments, as: :commentable
 
   # Scopes
   default_scope { order('bills.date DESC') }

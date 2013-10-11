@@ -1,0 +1,29 @@
+
+<br/><br/>
+<h1><%= t('new_bill') %></h1>
+<br/>
+
+<%= form_tag(create_bill_bills_path) do %>
+
+  <%= render partial: 'shared/error_messages', locals: {resource: @bill} %>
+
+  <%= label_tag :user_id,  Bill.human_attribute_name(:user_id) %>
+  <%= select_tag :user_id, options_from_collection_for_select(@users, :id, :name, @bill.user_id), prompt: 'Selecione um usuário'  %>
+
+  <%= label_tag :name, Bill.human_attribute_name(:name) %>
+  <%= text_field_tag :name, @bill.name %>
+
+  <%= label_tag :description, Bill.human_attribute_name(:description) %>
+  <%= text_field_tag :description, @bill.description %>
+
+  <%= label_tag :date, Bill.human_attribute_name(:date) %>
+  <%= text_field_tag :date, @bill.date %>
+
+  <%= label_tag :value, Bill.human_attribute_name(:value) %>
+  <%= text_field_tag :value, @bill.value %>
+
+  <div class='form-actions'>
+    <%= submit_tag 'Salvar', class: 'btn btn-success' %>
+  </div>
+
+<% end %>

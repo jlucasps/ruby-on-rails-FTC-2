@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131009010218) do
+ActiveRecord::Schema.define(version: 20131010234312) do
 
   create_table "bills", force: true do |t|
     t.string   "name",        null: false
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20131009010218) do
   end
 
   add_index "bills", ["user_id"], name: "index_bills_on_user_id"
+
+  create_table "comments", force: true do |t|
+    t.string   "content",          null: false
+    t.integer  "commentable_id",   null: false
+    t.string   "commentable_type", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

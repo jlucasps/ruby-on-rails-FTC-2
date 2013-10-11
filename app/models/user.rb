@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
 
   # Associations
   has_many :bills, :dependent => :destroy
+  has_many :comments, as: :commentable
+
 
   # Scopes
 
@@ -31,6 +33,6 @@ class User < ActiveRecord::Base
   def send_welcome_email
     AppMailer::UserMailer.welcome_message(self.name, self.email).deliver
   end
-  
+
 end
 
